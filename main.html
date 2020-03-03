@@ -1,37 +1,130 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>GitHub</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- 파비콘 설정 -->
-    <link rel="icon" href="https://heropcode.github.io/GitHub-Responsive/img/logo.svg">
-</head>
-<body>
-    <!--상단 nav 영역-->
-    <nav id="navi" role="navigation">
-        <!-- Github 로고-->
-        <div id="logo">
-            <img src="https://heropcode.github.io/GitHub-Responsive/img/logo.svg" alt="Github">
-        </div>
-        <!--메뉴-->
-        <div id="menu">
-            <div class="menu-item">Personal</div>
-            <div class="menu-item">Open Source</div>
-            <div class="menu-item">Business</div>
-            <div class="menu-item">Explore</div>
-        </div>
-    </nav>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>GitHub</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- 파비콘 설정 -->
+        <link rel="icon" href="https://heropcode.github.io/GitHub-Responsive/img/logo.svg">
 
-    <!--본문 영역-->
-<article id="contents">
-    <section id="title-section">
-        <h2 class="title">GitHub &nbsp;메인 페이지 입니다!!</h2>
-    </section>
+        <script language="JavaScript">
+            function Search()
+            {
 
-    <section id="description-section">
-         <p class="description">"내용을 적어주세요!</p>
-    </section>
-</article>
-</body>
-</html>
+            } 
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <!--상단 nav 영역-->
+            <nav id="navi" role="navigation">
+                <!-- 
+                    Github 로고
+                    - 이미지 링크 설정
+                    - alt(이미지 대체 문구) 설정
+                -->
+                <a id="logo" href="https://github.com/">
+                    <img src="https://heropcode.github.io/GitHub-Responsive/img/logo.svg" alt="Github">
+                </a>
+                <!-- 메뉴 -->
+                <div>
+                    <ul class="menu-list">
+                        <li><a href="#" class="menu-item">Personal</a></li>
+                        <li><a href="#" class="menu-item">Open Source</a></li>
+                        <li><a href="#" class="menu-item">Business</a></li>
+                        <li><a href="#" class="menu-item">Explore</a></li>
+                    </ul>
+
+                <!-- 서브 메뉴 -->
+                    <ul class="submenu-list">
+                        <li><a href="#" class="submenu-item">Pricing</a></li>
+                        <li><a href="#" class="submenu-item">Blog</a></li>
+                        <li><a href="#" class="submenu-item">Support</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+           
+            <div>
+                 <!--
+                검색창 영역
+                - placeholder 문구 추가
+                - 엔터키 클릭 이벤트 포함
+                -->
+                <input class="search-box" type="search" placeholder="Search Github" 
+                onKeypress="if(event.keyCode==13) {location.href='https://github.com/search?utf8=%E2%9C%93&q=&type='}">
+                
+                <!-- 
+                버튼 영역
+                - 버튼 클릭 이벤트 포함
+                 --> 
+                <button class="sign-in" onclick="location.href='https://github.com/login'">Sign in</button>
+                <button class="sign-up" onclick="location.href='https://github.com/join?source=header-home'">Sign up</button>
+            </div>
+         </div>
+
+
+        <!-- 소개 영역 -->
+        <article id="intro">
+            <!-- 소개글 영역 -->
+            <section id="contents-section">
+                <h2 class="intro-title">How people build software</h2>
+                <p class="intro-description">Millions of developers use GitHub to build personal projects, support their businesses, and work together on open source technologies.</p>
+            </section>
+                
+            <!-- 가입 form 영역 -->
+            <section id="signupform-section">
+                <form action="" method="post">
+                    <!-- 이름 입력란 -->
+                    <input class="input-username" placeholder="Pick a username">
+                    
+                    <!-- 주소 입력란 -->
+                    <input class="input-address" placeholder="Your email address">
+                    
+                    <!-- 비밀번호 입력란 -->
+                    <input class="input-password" placeholder="Create a password">
+                    
+                    <!-- 가입 설명 문구 -->
+                    <p class="caption">Use at least one letter, one numeral, and seven characters.</p>
+                    
+                    <!-- 가입 버튼 -->
+                    <button type="submit" class="signup-button">Sign up for GitHub</button>
+                
+                    <!-- 가입 설명 문구 -->
+                    <p class="caption">By clicking "Sign up for GitHub", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.</p>
+                </form>
+            </section>
+        </article>
+        
+        <!-- 본문 영역 -->
+        <article id="main">
+                <section>
+                    <!-- 내용 -->
+                    <p class="main-title1"> Welcome home, developers </p>
+                    <p class="main-description1">GitHub fosters a fast, flexible, and collaborative development process that lets you work on your own or with others.</p>
+                    
+                    <!-- youtube 영상 삽입 -->
+                    <iframe class="youtube" width="857" height="482" src="https://www.youtube.com/embed/m2aCuC-LU2E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                
+                    <!-- 내용 -->
+                    <p class="main-title2"> Where is GitHub? </p>
+                    <p class="main-description2">GitHub is where people build software. More than 18 million people use GitHub to discover, fork, and contribute to over 48 million projects.</p>
+                    
+                    <!-- 네이버 지도 삽입-->
+                    <table cellpadding="0" cellspacing="0" width="462"> <tr> <td style="border:1px solid #cecece;"><a href="https://v4.map.naver.com/?searchCoord=ef155983d0be2ed9b2d4c2c0000b402a745abb198b06fb5f84d14913579b0ab6&query=TiBUZWNoIFNlcnZpY2U%3D&menu=location&tab=1&lng=790dc1be06ead72c745a945edb6afe9c&mapMode=0&mpx=2fe91dad9ade55188370d03ff43a7ec06a7581f76d53d150af19f7bec5d9059eaf91931e797628f0a668cb784c2387ac6f56f080cb6058612053c52ef2694286&lat=78536f6dbff7fef45e1dc37957e12a61&dlevel=12&enc=b64" target="_blank"><img src="http://prt.map.naver.com/mashupmap/print?key=p1583252102648_825156437" width="460" height="340" alt="지도 크게 보기" title="지도 크게 보기" border="0" style="vertical-align:top;"/></a></td> </tr> <tr> <td> <table cellpadding="0" cellspacing="0" width="100%"> <tr> <td height="30" bgcolor="#f9f9f9" align="left" style="padding-left:9px; border-left:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="font-family: tahoma; font-size: 11px; color:#666;">2020.3.4</span>&nbsp;<span style="font-size: 11px; color:#e5e5e5;">|</span>&nbsp;<a style="font-family: dotum,sans-serif; font-size: 11px; color:#666; text-decoration: none; letter-spacing: -1px;" href="https://v4.map.naver.com/?searchCoord=ef155983d0be2ed9b2d4c2c0000b402a745abb198b06fb5f84d14913579b0ab6&query=TiBUZWNoIFNlcnZpY2U%3D&menu=location&tab=1&lng=790dc1be06ead72c745a945edb6afe9c&mapMode=0&mpx=2fe91dad9ade55188370d03ff43a7ec06a7581f76d53d150af19f7bec5d9059eaf91931e797628f0a668cb784c2387ac6f56f080cb6058612053c52ef2694286&lat=78536f6dbff7fef45e1dc37957e12a61&dlevel=12&enc=b64" target="_blank">지도 크게 보기</a> </td> <td width="98" bgcolor="#f9f9f9" align="right" style="text-align:right; padding-right:9px; border-right:1px solid #cecece; border-bottom:1px solid #cecece;"> <span style="float:right;"><span style="font-size:9px; font-family:Verdana, sans-serif; color:#444;">&copy;&nbsp;</span>&nbsp;<a style="font-family:tahoma; font-size:9px; font-weight:bold; color:#2db400; text-decoration:none;" href="https://www.navercorp.com" target="_blank">NAVER Corp.</a></span> </td> </tr> </table> </td> </tr> </table>
+                </section>   
+                
+        </article>
+
+        <!-- 푸터 영역 -->
+        <div class="footer">
+            <br><br><br><hr>
+            <p>
+            <center>
+            <img src="https://heropcode.github.io/GitHub-Responsive/img/logo.svg" alt="박세연">&nbsp;&nbsp; 박세연 
+            <a id="link" href="https://github.com/se-yeon/webstudy">&nbsp;&nbsp; GitHub link</a>
+            </center>
+        </p>
+        </div>
+    </body>
+    </html>
